@@ -1,11 +1,5 @@
-# storybook-aera
+# aera-storybook
 This is a repo I created for testing Storybook for aera
-
-## To be able to run the project, move into the next project directory with:
-
-```
-cd storybook-aera
-```
 
 
 ## How to run storybook:
@@ -13,7 +7,6 @@ cd storybook-aera
 ```
 npm run storybook
 ```
-
 
 ## When building
 
@@ -23,6 +16,11 @@ Because some libraries don't support server components yet, you need to add
 ```
 at the top of the components you create to make the app build. See src/stories/bade/Badge.tsx as an example.
 
+
+## When running chromatic
+```
+npx chromatic --project-token chpt_a034259f64698cf
+```
 
 ## When publishing package
 
