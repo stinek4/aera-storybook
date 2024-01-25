@@ -9,7 +9,6 @@ import { Colors, ButtonColors } from "../../styles/Colors"
 export interface ButtonProps {
   variant?: string;
   backgroundColor?: string;
-  size?: 'small' | 'medium' | 'large';
   label: string;
   onClick?: () => void;
   disabled?: boolean;
@@ -20,7 +19,6 @@ const Button = ({
   // primary = false,
   variant,
   backgroundColor,
-  size = 'medium',
   label,
   disabled,
   children,
@@ -81,7 +79,7 @@ const VariantButton = styled.button<ButtonProps>`
         text-decoration: ${({ variant }) => variant === "text" && "underline"};
         text-underline-offset: 3px;
     }
-    :disabled {
+    &:disabled {
         background-color: ${({ variant }) =>
           ButtonColors.backGround.disabled[variant  as keyof typeof ButtonColors.backGround.disabled]};
         color: ${({ variant }) => ButtonColors.text.disabled[variant  as keyof typeof ButtonColors.text.disabled]};

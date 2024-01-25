@@ -16,6 +16,11 @@ const meta = {
   // More on argTypes: https://storybook.js.org/docs/api/argtypes
   argTypes: {
     backgroundColor: { control: 'color' },
+    variant: {
+      options: ['primary', 'secondary', 'text', 'danger'],
+      defaultValue: 'primary',
+      control: { type: 'radio' },
+    },
   },
 } satisfies Meta<typeof Button>;
 
